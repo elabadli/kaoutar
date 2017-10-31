@@ -1,0 +1,45 @@
+<!--<ul>
+	<li id="one">Liste des étudiants</li>
+		<ul>
+			<li *ngFor="let etudiant of etudiants"> {{etudiant}}</li>
+		</ul>
+		<br>
+
+	<li id="two">Liste des etudaints admis</li>
+	<ul>
+		<li *ngIf="etudiant.moyenne>9"> {{etudiant}}</li>
+	</ul><br>
+	<li id="tree">Liste des etudaints non admis</li><br>
+	<ul>
+		<li *ngIf="etudiant.moyenne<10" >{{etudiant}}</li>
+	</ul>
+</ul> -->
+
+<ul>
+	<h2>Liste des étudiants</h2>
+	<li id="one" *ngFor="let etudiant of etudiants">
+		{{etudiant.nom}}
+	</li>
+</ul>
+
+<ul>
+	<h2>Liste des étudiants plus de la moyenne</h2>
+
+	<li id="two" *ngFor="let etudiant of etudiants">
+		<div *ngIf="etudiant.moyenne>9">
+		{{etudiant.nom}} avec une moyenne{{etudiant.moyenne}}
+	</div></li>
+</ul>
+
+<ul>
+	<h2>Liste des étudiants moins de la moyenne</h2>
+
+	<li id="tree" *ngFor="let etudiant of etudiants">
+		<div *ngIf="etudiant.moyenne< 10">
+		{{etudiant.nom}} avec une moyenne{{etudiant.moyenne}}
+	</div></li>
+</ul>
+<input type="text">
+
+  
+
